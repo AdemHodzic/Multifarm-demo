@@ -5,15 +5,13 @@ import { Asset, blankAsset, getAssets } from '../services/asset';
 import LineChart from "./lineChart";
 
 
-const Chart = (props: any) => {
+const Chart = () => {
     const [isLoading, setIsloading] = useState(true);
-    const [data, setData] = useState<Asset[]>([]);
     const [asset, setAsset] = useState<Asset>(blankAsset());
 
     useEffect(() => {
         (async () => {
             const assets = await getAssets();
-            setData(assets);
             setAsset(assets[0]);
             setIsloading(false);
         })();

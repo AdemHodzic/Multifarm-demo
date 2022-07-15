@@ -24,8 +24,8 @@ ChartJS.register(
 
 const buildGradient = (ctx: CanvasRenderingContext2D, height: number) => { 
     var gradient = ctx.createLinearGradient(0, 0, 0, height);
-    gradient.addColorStop(0, 'rgba(138,67,178,.6)');
-    gradient.addColorStop(1, 'rgba(57,93,137,.3)');
+    gradient.addColorStop(0, 'rgba(214,81,255,0.3)');
+    gradient.addColorStop(1, 'rgba(54,92,133, .3)');
 
     return gradient
 }
@@ -55,7 +55,7 @@ const LineChart = ({ rawData, label }: LineChartProps) => {
             {
                 fill: true,
                 backgroundColor: buildGradient(chartRef.current!.ctx, chartRef.current!.height),
-                borderColor: "rgb(138,67,178)",
+                borderColor: "rgb(214,81,255)",
                 data: rawData.map(elem => elem.value),
             }
         ]
