@@ -64,7 +64,7 @@ const LineChart = ({ rawData, label }: LineChartProps) => {
             labels,
             datasets
         })
-    }, [])
+    }, [rawData])
 
     const options = {
         responsive: true,
