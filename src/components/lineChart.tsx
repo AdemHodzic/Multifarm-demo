@@ -7,6 +7,7 @@ import {
   Title,
   Tooltip,
   Filler,
+  LineController,
 } from "chart.js";
 import { useEffect, useRef, useState } from "react";
 import { Chart } from "react-chartjs-2";
@@ -17,6 +18,7 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
+  LineController,
   Title,
   Tooltip,
   Filler,
